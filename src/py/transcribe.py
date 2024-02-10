@@ -13,8 +13,6 @@ def transcribe_audio(audio_path):
 
 if __name__ == "__main__":
     audio_path = sys.argv[1]
-    # print(audio_path)
-    # audio_path = "D:/transcriber/sample3.mp3"
     if Path(audio_path).is_file():
         transcribe_audio(audio_path)
     else:

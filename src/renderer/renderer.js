@@ -12,5 +12,5 @@ ipcRenderer.on('transcription-result', (event, data) => {
   
   ipcRenderer.on('transcription-error', (event, error) => {
     // error
-    document.getElementById('transcriptionResult').textContent = `错误: ${error}`;
+    document.getElementById('transcriptionResult').textContent = `Err: ${error}`;
   });
