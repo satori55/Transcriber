@@ -1,0 +1,39 @@
+body {
+    background-color: #272c36;
+    color: #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#transcriptionResult {
+    height: 100px; /* set height */
+    padding: 10px; /* padding */
+    line-height: 1.5; /* height between lines */
+    margin-top: 20px;
+    background: #0e032b; /* dark purple */
+    border-radius: 10px; /* corner radius */
+    color: #ddd; /* text color */
+    border: 1px solid #2c2a38; /* border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* shadow */
+    text-shadow: 1px 1px 2px black; /* text shadow */
+    overflow: auto; /* show scroll bar */
+}
+
+/* add gradient to the transcription result */
+#transcriptionResult {
+    background-image: linear-gradient(to right, #333, #222);
+}
