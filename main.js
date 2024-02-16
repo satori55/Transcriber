@@ -1,9 +1,8 @@
 // main.js
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const { PythonShell } = require('python-shell');
 
-
-
+Menu.setApplicationMenu(null);
 
 //default model
 let model_name = 'base';
@@ -39,7 +38,6 @@ ipcMain.on('open-file-dialog', (event) => {
     });
 });
 
-
 function createWindow() {
     // browser window options
     let win = new BrowserWindow({
@@ -55,6 +53,7 @@ function createWindow() {
     win.setMenu(null);
     // load index.html
     win.loadFile('src/renderer/index.html');
+
 }
 
 app.whenReady().then(createWindow);
