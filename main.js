@@ -1,6 +1,8 @@
 // main.js
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const { PythonShell } = require('python-shell');
+
+Menu.setApplicationMenu(null);
 
 ipcMain.on('open-file-dialog', (event) => {
   dialog.showOpenDialog({
@@ -39,7 +41,8 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-    }
+    },
+    
   });
   
   win.setMenu(null);
