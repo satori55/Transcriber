@@ -20,7 +20,7 @@ button {
 }
 
 #transcriptionResult {
-    height: 100px; /* set height */
+    height: 150px; /* set height */
     padding: 10px; /* padding */
     line-height: 1.5; /* height between lines */
     margin-top: 20px;
@@ -36,4 +36,22 @@ button {
 /* add gradient to the transcription result */
 #transcriptionResult {
     background-image: linear-gradient(to right, #333, #222);
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* make sure the title and the button are vertically aligned */
+    justify-content: space-between; /* make sure the title and the button are horizontally aligned */
+}
+
+h1 {
+    margin: 0;
+}
+
+#modelMenu {
+    background-color: #484f5e; /*set background color */
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
 }
