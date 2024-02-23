@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 防止滚动条影响视觉效果 */
+}
+.container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent content from overflowing the rounded corners */
+    background-color: #252a35; /* Your desired background color */
+    /* Other styling as needed */
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 分散对齐，确保底部按钮位于底部 */
+}
+
+.back-button {
+    background-color: #2c723e; /* 按钮背景颜色 */
+    color: #ffffff;
+    font-size: large;
+    border: none; /* 去除边框 */
+    border-radius: 5px;
+    align-self: center; /* 按钮在容器中水平居中 */
+    padding: 10px 20px; /* 按钮的内边距 */
+    cursor: pointer; /* 鼠标悬停时显示手型指针 */
+    margin-top: auto; /* 确保按钮总是位于容器底部 */
+    margin-bottom: 20px;
+}

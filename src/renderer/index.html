@@ -5,21 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whisper Transcriber</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_index.css">
 </head>
 
 <body>
+    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000;"></div>
+
     <div class="header-container">
-        <h1>Welcome to Whisper GUI</h1>
+        <h1>Welcome to Transcriber</h1>
         <select id="modelMenu">
             <option value="" disabled selected>Select a model</option>
         </select>
     </div>
+
     <!-- Button for start! -->
     <button id="transcribeButton">Transcribe Audio</button>
+    <button id="settingsButton">Settings</button>
+
+    <!-- add a div to display the transcription result -->
     <div id="transcriptionResult"></div>
 
+    <!-- add a status bar -->
+    <div id="status-bar">
+        No message yet.
+    </div>
+
     <!-- renderer processing -->
-    <script src="renderer.js"></script>
+    <script src="renderer_index.js"></script>
 </body>
+
 </html>

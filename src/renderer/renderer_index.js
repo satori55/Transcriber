@@ -1,9 +1,19 @@
 // renderer.js
 const { ipcRenderer } = require('electron');
 
-// Button click event
+// Button click event of transcribeButton
 document.getElementById('transcribeButton').addEventListener('click', () => {
     ipcRenderer.send('open-file-dialog');
+});
+
+// Button click event of settingsButton
+document.getElementById('settingsButton').addEventListener('click', () => {
+    showSettings();
+    ipcRenderer.send('open-settings-window');
+});
+
+ipcRenderer.on('close-settings-window', (event) => {
+    closeSettings();
 });
 
 // text send back
@@ -38,3 +48,20 @@ dropdown.addEventListener('change', function () {
     var selectedValue = this.value;
     ipcRenderer.send('dropdown-value', selectedValue);
 });
+
+// status bar update
+function updateStatusBar(text) {
+    const statusBar = document.getElementById('status-bar');
+    statusBar.innerText = text;
+}
+
+updateStatusBar('Transcriber is ready!');
+
+function showSettings() {
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function closeSettings() {
+    // 假设有一个方法来关闭设置窗口
+    document.getElementById('overlay').style.display = 'none';
+}

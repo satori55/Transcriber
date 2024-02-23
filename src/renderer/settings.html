@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" type="text/css" href="style_settings.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Your settings content here -->
+        <div class="contain"
+        <h1>Settings</h1>
+        </div>
+        <button class="back-button" id="settingsBack">BACK</button>
+    </div>
+    
+    <!-- renderer processing -->
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        document.getElementById('settingsBack').addEventListener('click', () => {
+            ipcRenderer.send('close-settings-window');
+});
+    </script>
+</body>
+</html>

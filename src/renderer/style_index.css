@@ -35,7 +35,7 @@ button {
 
 /* add gradient to the transcription result */
 #transcriptionResult {
-    background-image: linear-gradient(to right, #333, #222);
+    background-image: linear-gradient(to right, #222, #333);
 }
 
 .header-container {
@@ -54,4 +54,16 @@ h1 {
     padding: 5px;
     border: none;
     border-radius: 5px;
+}
+
+#status-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #303033;
+    color: #868686;
+    text-align: left;
+    padding: 2px 10px;
+    font-size: 14px;
 }
