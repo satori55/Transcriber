@@ -8,7 +8,7 @@ html, body {
 .container {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden; /* Prevent content from overflowing the rounded corners */
     background-color: #252a35; /* Your desired background color */
     /* Other styling as needed */
@@ -23,7 +23,7 @@ html, body {
     color: #ffffff;
     font-size: large;
     border: none; /* 去除边框 */
-    border-radius: 5px;
+    border-radius: 4px;
     align-self: center; /* 按钮在容器中水平居中 */
     padding: 10px 20px; /* 按钮的内边距 */
     cursor: pointer; /* 鼠标悬停时显示手型指针 */

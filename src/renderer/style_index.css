@@ -20,12 +20,12 @@ button {
 }
 
 #transcriptionResult {
-    height: 150px; /* set height */
+    height: 300px; /* set height */
     padding: 10px; /* padding */
     line-height: 1.5; /* height between lines */
     margin-top: 20px;
     background: #0e032b; /* dark purple */
-    border-radius: 10px; /* corner radius */
+    border-radius: 8px; /* corner radius */
     color: #ddd; /* text color */
     border: 1px solid #2c2a38; /* border color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* shadow */
@@ -53,7 +53,7 @@ h1 {
     color: white;
     padding: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 #status-bar {

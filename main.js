@@ -29,6 +29,7 @@ ipcMain.on('open-file-dialog', (event) => {
             // audio file path
             const selectedFilePath = result.filePaths[0];
             //   console.log('Selected File:', selectedFilePath);
+            event.sender.send('file-selected');
 
             // Python script
             if (selectedFilePath) {
@@ -41,7 +42,7 @@ ipcMain.on('open-file-dialog', (event) => {
                     // It's also good practice to catch any errors
                     console.error('Error:', err);
                 });
-            };
+            }
         }
     }).catch(err => {
         console.log(err);
@@ -52,7 +53,7 @@ ipcMain.on('open-file-dialog', (event) => {
 ipcMain.on('open-settings-window', (event) => {
     let viewX = Math.round((win.getContentBounds().width - viewWidth) / 2);
     let viewY = Math.round((win.getContentBounds().height - viewHeight) / 2);
-    
+
     settingsView = new BrowserView({
         webPreferences: {
             nodeIntegration: true,
@@ -62,7 +63,7 @@ ipcMain.on('open-settings-window', (event) => {
     win.addBrowserView(settingsView);
     settingsView.setBounds({ x: viewX, y: viewY, width: viewWidth, height: viewHeight });
     settingsView.webContents.loadURL(path.join(__dirname, 'src/renderer/settings.html'));
-    });
+});
 
 // close settings window
 ipcMain.on('close-settings-window', (event) => {

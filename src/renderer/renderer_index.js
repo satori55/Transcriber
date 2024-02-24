@@ -20,11 +20,13 @@ ipcRenderer.on('close-settings-window', (event) => {
 ipcRenderer.on('transcription-result', (event, data) => {
     // show transcription result
     document.getElementById('transcriptionResult').textContent = data;
+    updateStatusBar('Transcription complete!');
 });
 
 ipcRenderer.on('transcription-error', (event, error) => {
     // error
     document.getElementById('transcriptionResult').textContent = `Err: ${error}`;
+    updateStatusBar('Transcription failed!');
 });
 
 // Model selection dropdown
@@ -55,13 +57,19 @@ function updateStatusBar(text) {
     statusBar.innerText = text;
 }
 
+// initial status
 updateStatusBar('Transcriber is ready!');
 
+//status for file selected
+ipcRenderer.on('file-selected', () => {
+    updateStatusBar('File selected. Transcribing...');
+});
+
+// Settings overlay of main win
 function showSettings() {
     document.getElementById('overlay').style.display = 'block';
 }
 
 function closeSettings() {
-    // 假设有一个方法来关闭设置窗口
     document.getElementById('overlay').style.display = 'none';
 }
