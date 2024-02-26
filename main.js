@@ -62,7 +62,7 @@ ipcMain.on('open-settings-window', (event) => {
     });
     win.addBrowserView(settingsView);
     settingsView.setBounds({ x: viewX, y: viewY, width: viewWidth, height: viewHeight });
-    settingsView.webContents.loadURL(path.join(__dirname, 'src/renderer/settings.html'));
+    settingsView.webContents.loadFile(path.join(__dirname, 'src/renderer/settings.html'));
 });
 
 // close settings window

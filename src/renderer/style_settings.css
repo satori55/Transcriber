@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     border-radius: 8px;
     overflow: hidden; /* Prevent content from overflowing the rounded corners */
-    background-color: #252a35; /* Your desired background color */
+    background-color: #272c36; /* Your desired background color */
     /* Other styling as needed */
     color: #e6e6e6;
     display: flex;
