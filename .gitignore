@@ -14,3 +14,5 @@ build/
 *.pak
 *.blob
 *.bin
+Dockerfile
+*docker*.*
